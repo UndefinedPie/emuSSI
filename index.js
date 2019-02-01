@@ -7,7 +7,7 @@ module.exports = (RenderTemplate, config) => {
 		ssiIncludes.map(item => {
 			let rbPath = item.split('"')[1].split("?")[0];
 			let id = rbPath.split(`/${config.virtualPath}/`)[1];
-			let fileName = path.join(__dirname, rbPath);
+			let fileName = path.join(__dirname).split("node_modules")[0] + rbPath;
 			let ssiEmptyRegexp = new RegExp(`<!--# if expr="(.)SLOT_${id}(.*?)endif-->`, "gi");
 			let ssiEmptyExpr = RenderTemplate.match(ssiEmptyRegexp);
 			try {
@@ -21,7 +21,6 @@ module.exports = (RenderTemplate, config) => {
 				}
 			} catch (err) {
 				RenderTemplate = RenderTemplate.replace(item, "");
-				console.error("Not exsit file: " + fileName);
 			}
 		});
 	}
