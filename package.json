@@ -1,0 +1,23 @@
+{
+  "name": "emussi",
+  "version": "1.0.0",
+  "description": "Small tool for replace ssi includes for Express RenderTemplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Angmor23/emuSSI.git"
+  },
+  "keywords": [
+    "ssi",
+    "express"
+  ],
+  "author": "v.e.pirogov@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Angmor23/emuSSI/issues"
+  },
+  "homepage": "https://github.com/Angmor23/emuSSI#readme"
+}
